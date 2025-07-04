@@ -22,6 +22,8 @@ A simple and intuitive personal task management application built with React. Th
   - ⏳ Pending tasks only
   - ✅ Completed tasks only
   - Dynamic task counts for each filter
+  - Search a Pirticular Task
+  - Filter by Categories
 - **Data Persistence**: All tasks stored in localStorage
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 
@@ -61,6 +63,17 @@ A simple and intuitive personal task management application built with React. Th
 - **CSS3** - Styling with modern features
 - **localStorage API** - Data persistence
 - **ES6+** - Modern JavaScript features
+
+## 🔗 Live Demo
+https://task-tracker-henna-five.vercel.app
+
+## 🖼 Screenshots
+
+<img width="1679" alt="Screenshot 2025-07-04 at 10 37 00 PM" src="https://github.com/user-attachments/assets/dab3b8a9-26f9-4b67-ab28-c934a9da741d" />
+<img width="1680" alt="Screenshot 2025-07-04 at 10 38 22 PM" src="https://github.com/user-attachments/assets/b21e5043-02db-408f-97c4-d952a10233c4" />
+<img width="1680" alt="Screenshot 2025-07-04 at 10 38 33 PM" src="https://github.com/user-attachments/assets/ec93f3fc-8841-4da3-9b06-4a8936f6e562" />
+<img width="1465" alt="Screenshot 2025-07-04 at 10 38 53 PM" src="https://github.com/user-attachments/assets/a7646e51-6e3e-47f1-b0ba-b0e6e5388521" />
+<img width="1530" alt="Screenshot 2025-07-04 at 10 39 38 PM" src="https://github.com/user-attachments/assets/85b00cad-f145-4af2-b0fe-e2b1a5761534" />
 
 ## 📁 Project Structure
 
