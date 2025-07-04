@@ -22,6 +22,8 @@ A simple and intuitive personal task management application built with React. Th
   - ⏳ Pending tasks only
   - ✅ Completed tasks only
   - Dynamic task counts for each filter
+  - Search a Pirticular Task
+  - Filter by Categories
 - **Data Persistence**: All tasks stored in localStorage
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 
