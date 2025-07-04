@@ -1,0 +1,382 @@
+/* TaskItem Component Styles */
+.task-item {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-primary);
+  transition: all 0.3s ease;
+  position: relative;
+  animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.task-item.completed {
+  background: var(--bg-tertiary);
+  border-left: 4px solid #28a745;
+  opacity: 0.8;
+}
+
+.task-item.pending {
+  border-left: 4px solid #ffc107;
+}
+
+/* Priority border indicators */
+.task-item.priority-high {
+  border-left: 4px solid #dc3545;
+}
+
+.task-item.priority-medium {
+  border-left: 4px solid #ffc107;
+}
+
+.task-item.priority-low {
+  border-left: 4px solid #28a745;
+}
+
+.task-item.completed.priority-high,
+.task-item.completed.priority-medium,
+.task-item.completed.priority-low {
+  border-left: 4px solid #6c757d;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.task-title-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.task-title {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.task-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.priority-badge,
+.category-badge,
+.due-date-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.priority-badge.priority-high {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.priority-badge.priority-medium {
+  background: #fef3c7;
+  color: #d97706;
+  border: 1px solid #fed7aa;
+}
+
+.priority-badge.priority-low {
+  background: #dcfce7;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.category-badge {
+  border: 1px solid var(--border-primary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.due-date-badge {
+  background: #e0f2fe;
+  color: #0277bd;
+  border: 1px solid #b3e5fc;
+}
+
+.due-date-badge.due-today {
+  background: #fff3e0;
+  color: #ef6c00;
+  border: 1px solid #ffcc02;
+}
+
+.due-date-badge.due-overdue {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.due-date-badge.due-upcoming {
+  background: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.task-actions button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button {
+  background: #f8f9fa;
+  color: #666;
+  border: 2px solid #e1e5e9;
+}
+
+.toggle-button.complete {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.toggle-button.incomplete {
+  background: white;
+  color: #ffc107;
+  border-color: #ffc107;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.edit-button {
+  background: #007bff;
+  color: white;
+}
+
+.edit-button:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+.delete-button {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+.task-description {
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.task-item.completed .task-description {
+  color: #999;
+}
+
+.task-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.85rem;
+}
+
+.task-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.task-item.completed .task-status {
+  background: #d4edda;
+  color: #155724;
+}
+
+.task-item.pending .task-status {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.task-date {
+  color: #888;
+  font-weight: 500;
+}
+
+/* Dark mode styles */
+.dark-mode .task-item {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.dark-mode .task-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .task-item.completed {
+  background: #1a202c;
+}
+
+.dark-mode .task-title {
+  color: #e2e8f0;
+}
+
+.dark-mode .task-item.completed .task-title {
+  color: #a0aec0;
+}
+
+.dark-mode .task-description {
+  color: #a0aec0;
+}
+
+.dark-mode .task-item.completed .task-description {
+  color: #718096;
+}
+
+.dark-mode .task-meta {
+  border-top-color: #4a5568;
+}
+
+.dark-mode .task-date {
+  color: #a0aec0;
+}
+
+.dark-mode .toggle-button {
+  background: #4a5568;
+  color: #a0aec0;
+  border-color: #718096;
+}
+
+.dark-mode .toggle-button.incomplete {
+  background: #2d3748;
+  border-color: #ffc107;
+}
+
+/* Enhanced hover effects */
+.task-item:hover .task-badges > * {
+  transform: scale(1.05);
+}
+
+.task-item:hover .task-actions button {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-item {
+    padding: 1rem;
+  }
+
+  .task-header {
+    gap: 0.75rem;
+  }
+
+  .task-title {
+    font-size: 1rem;
+  }
+
+  .task-actions {
+    gap: 0.25rem;
+  }
+
+  .task-actions button {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .task-badges {
+    gap: 0.25rem;
+  }
+
+  .priority-badge,
+  .category-badge,
+  .due-date-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .task-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    align-self: flex-end;
+    margin-top: -0.5rem;
+  }
+
+  .task-badges {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+}

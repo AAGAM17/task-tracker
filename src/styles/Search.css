@@ -1,0 +1,140 @@
+/* Search Component Styles */
+.search-container {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-primary);
+  transition: all 0.3s ease;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  z-index: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  border: 2px solid var(--border-primary);
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: var(--bg-secondary);
+}
+
+.clear-search-button {
+  position: absolute;
+  right: 1rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.clear-search-button:hover {
+  background: #495057;
+  transform: scale(1.1);
+}
+
+.search-info {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #e7f3ff;
+  border-radius: 8px;
+  color: #0056b3;
+  font-size: 0.9rem;
+  border-left: 4px solid #007bff;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode styles */
+.dark-mode .search-container {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+.dark-mode .search-input {
+  background: #4a5568;
+  border-color: #718096;
+  color: #e2e8f0;
+}
+
+.dark-mode .search-input:focus {
+  border-color: #667eea;
+  background: #2d3748;
+}
+
+.dark-mode .search-input::placeholder {
+  color: #a0aec0;
+}
+
+.dark-mode .search-icon {
+  color: #a0aec0;
+}
+
+.dark-mode .search-info {
+  background: #2b6cb0;
+  color: #bee3f8;
+  border-left-color: #3182ce;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .search-container {
+    padding: 1rem;
+  }
+
+  .search-input {
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .search-icon {
+    left: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .clear-search-button {
+    right: 0.75rem;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+}

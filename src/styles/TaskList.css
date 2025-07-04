@@ -1,0 +1,86 @@
+/* TaskList Component Styles */
+.task-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-list.empty {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-primary);
+}
+
+.empty-state {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin: 0;
+  opacity: 0.6;
+}
+
+.empty-message {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+/* Animation for task items */
+.task-items > * {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-list.empty {
+    padding: 2rem 1.5rem;
+  }
+
+  .empty-icon {
+    font-size: 3rem;
+  }
+
+  .empty-message {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-list.empty {
+    padding: 1.5rem 1rem;
+  }
+
+  .empty-icon {
+    font-size: 2.5rem;
+  }
+
+  .empty-message {
+    font-size: 0.95rem;
+  }
+}
