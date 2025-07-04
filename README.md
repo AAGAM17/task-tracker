@@ -37,7 +37,7 @@ A simple and intuitive personal task management application built with React. Th
 
 1. **Clone the repository**
    ```bash
-   git clone 
+   git clone https://github.com/AAGAM17/task-tracker.git
    cd task-tracker
    ```
 
