@@ -188,10 +188,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
 
-## 👨‍💻 Developer
-
-Built as part of an internship pre-hire assignment to demonstrate React.js skills and modern web development practices.
-
 ---
 
 **Happy Task Tracking!** 🎉
